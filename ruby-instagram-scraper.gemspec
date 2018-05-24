@@ -1,15 +1,15 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 Gem::Specification.new do |s|
-  s.name        = 'ruby-instagram-scraper'
-  s.version     = '0.1.7'
-  s.date        = '2016-05-31'
-  s.summary     = "A simple module for requests to Instagram without an API key."
-  s.description = "A simple module for requests to Instagram without an API key."
-  s.authors     = [ "Sergey Borodanov" ]
-  s.email       = "s.borodanov@gmail.com"
-  s.files       = [ "lib/ruby-instagram-scraper.rb" ]
-  s.test_files  = [ "test/ruby_instagram_scraper_test.rb" ]
-  s.homepage    = 'https://github.com/sborod/ruby-instagram-scraper'
+  s.name        = 'proxy-instagram-scraper'
+  s.version     = '0.0.1'
+  s.date        = '2018-05-24'
+  s.summary     = "A simple module for requests to Instagram without an API key using proxy"
+  s.description = "A simple module for requests to Instagram without an API key using proxy"
+  s.authors     = [ "Sebastian Ponce" ]
+  s.email       = "sebastian@gnium.com"
+  s.files       = [ "lib/proxy-instagram-scraper.rb" ]
+  s.test_files  = [ "test/proxy_instagram_scraper_test.rb" ]
+  s.homepage    = 'https://github.com/gnium/proxy-instagram-scraper'
   s.license     = 'MIT'
 end

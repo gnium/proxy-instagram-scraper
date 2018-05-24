@@ -3,13 +3,13 @@
 ### Installation
 
 ```sh
-$ gem install ruby-instagram-scraper
+$ gem install proxy-instagram-scraper
 ```
 
 Or with Bundler in your Gemfile.
 
 ```ruby
-gem 'ruby-instagram-scraper'
+gem 'proxy-instagram-scraper'
 ```
 
 ### Methods
@@ -18,21 +18,21 @@ After installation you can do following requests to Instagram:
 
 ```ruby
 # Search by tag or username:
-RubyInstagramScraper.search( "gopro" )
+ProxyInstagramScraper.search( "gopro" )
 
 # Get user media nodes:
-RubyInstagramScraper.get_user_media_nodes( "gopro" )
+ProxyInstagramScraper.get_user_media_nodes( "gopro" )
 
 # Pass an "id" of node to offset:
-RubyInstagramScraper.get_user_media_nodes( "gopro", "1259825963188747360" )
+ProxyInstagramScraper.get_user_media_nodes( "gopro", "1259825963188747360" )
 
 # Get media nodes by tag:
-nodes = RubyInstagramScraper.get_tag_media_nodes( "gopro" )
+nodes = ProxyInstagramScraper.get_tag_media_nodes( "gopro" )
 
 # Get next portion of nodes of same tag by passing last node "id":
-RubyInstagramScraper.get_tag_media_nodes( "gopro", nodes.last["id"] )
+ProxyInstagramScraper.get_tag_media_nodes( "gopro", nodes.last["id"] )
 
 # Get media info:
-RubyInstagramScraper.get_media( nodes.first["code"] )
-RubyInstagramScraper.get_media( "BGGnlHDBV3N" )
+ProxyInstagramScraper.get_media( nodes.first["code"] )
+ProxyInstagramScraper.get_media( "BGGnlHDBV3N" )
 ```
