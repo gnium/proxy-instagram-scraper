@@ -1,13 +1,5 @@
-# v0.1.7
-# get_user method bug fixed
+# v0.0.2
+# Added env file support
 
-# v0.1.6
-# get_user method added
-
-# v0.1.5
-# Readme added
-# Some tests added
-# Some refactoring
-
-# v0.1.0
+# v0.0.1
 # Initial commit.

@@ -5,7 +5,7 @@ module ProxyInstagramScraper
 
   BASE_URL = "http://www.instagram.com"
 
-  PROXY = ENV["proxy_scrapper_url"];
+  PROXY = ENV["proxy_scrapper_url"]
   
   def self.search ( query )
     # return false unless query
