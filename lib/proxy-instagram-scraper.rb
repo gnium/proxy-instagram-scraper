@@ -9,12 +9,10 @@ module ProxyInstagramScraper
   
   def self.search ( query )
     # return false unless query
-    
     url = "#{BASE_URL}/web/search/topsearch/"
     params = "?query=#{ query }"
-    puts url
-    puts JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )
-    JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )
+    rs = JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )['users']
+    user = rs.select {|u| u["user"]["username"] == query }
   end
 
   def self.get_user_media_nodes ( username, max_id = nil )
