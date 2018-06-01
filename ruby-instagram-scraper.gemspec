@@ -2,7 +2,7 @@
 # encoding: utf-8
 Gem::Specification.new do |s|
   s.name        = 'proxy-instagram-scraper'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.date        = '2018-05-24'
   s.summary     = "A simple module for requests to Instagram without an API key using proxy"
   s.description = "A simple module for requests to Instagram without an API key using proxy"
