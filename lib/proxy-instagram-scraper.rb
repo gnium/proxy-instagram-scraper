@@ -11,7 +11,7 @@ module ProxyInstagramScraper
     # return false unless query
     url = "#{BASE_URL}/web/search/topsearch/"
     params = "?query=#{ query }&context=user"
-    rs = JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )['users']
+    rs = JSON.parse( open( "#{url}#{params}" ).read )['users']
     user = rs.select {|u| u["user"]["username"] == query }
   end
 
@@ -26,7 +26,7 @@ module ProxyInstagramScraper
     params = ""
     params = "?max_id=#{ max_id }" if max_id
 
-    JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )
+    JSON.parse( open( "#{url}#{params}" ).read )
   end
 
   def self.get_user ( username, max_id = nil )
@@ -34,7 +34,7 @@ module ProxyInstagramScraper
     params = ""
     params = "&max_id=#{ max_id }" if max_id
 
-    JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )["user"]
+    JSON.parse( open( "#{url}#{params}" ).read )["user"]
   end
 
   def self.get_tag_media_nodes ( tag, max_id = nil )
@@ -42,14 +42,14 @@ module ProxyInstagramScraper
     params = ""
     params = "&max_id=#{ max_id }" if max_id
 
-    JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )["tag"]["media"]["nodes"]
+    JSON.parse( open( "#{url}#{params}" ).read )["tag"]["media"]["nodes"]
   end
 
   def self.get_media ( code )
     url = "#{BASE_URL}/p/#{ code }/?__a=1"
     params = ""
 
-    JSON.parse( open( "#{url}#{params}" , proxy: URI.parse(PROXY)).read )["media"]
+    JSON.parse( open( "#{url}#{params}" ).read )["media"]
   end
 
   def self.get_media_comments ( shortcode, count = 40, before = nil )
@@ -59,7 +59,7 @@ module ProxyInstagramScraper
       follows{count},followed_by{count},biography,full_name,media{count},\
       is_private,external_url,is_verified}},page_info}}"
 
-    JSON.parse( open( url , proxy: URI.parse(PROXY)).read )["comments"]
+    JSON.parse( open( url ).read )["comments"]
   end
   
 end
