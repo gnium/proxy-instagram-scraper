@@ -3,7 +3,7 @@ require 'json'
 
 module ProxyInstagramScraper
 
-  BASE_URL = "http://www.instagram.com"
+  BASE_URL = "https://www.instagram.com"
 
   PROXY = ENV["proxy_scrapper_url"]
   
