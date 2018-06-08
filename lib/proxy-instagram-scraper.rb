@@ -22,8 +22,6 @@ module ProxyInstagramScraper
     
     # JSON.parse( open( "#{url}#{params}" ).read )["tag"]["media"]["nodes"]
     JSON.parse( open( "#{url}#{params}" ).read )["graphql"]["hashtag"]["edge_hashtag_to_media"]["edges"]
-    rescue JSON::ParserError => e
-      return false
   end
 
   def self.get_user_media_nodes ( username, max_id = nil )
