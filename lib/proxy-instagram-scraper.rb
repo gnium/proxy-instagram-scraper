@@ -17,11 +17,9 @@ module ProxyInstagramScraper
 
   def self.get_user_data ( username, options = {} )
     url = "#{BASE_URL}/#{ username }"
+
     resp = open( url, options ).read.split("window._sharedData = ")[1].split(";</script>")[0]
-    #JSON.parse(resp)['entry_data']['ProfilePage'][0]['graphql']['user']
-    
-    # JSON.parse( open( "#{url}#{params}" ).read )["tag"]["media"]["nodes"]
-    JSON.parse( open( "#{url}#{params}" ).read )["graphql"]["hashtag"]["edge_hashtag_to_media"]["edges"]
+    JSON.parse(resp)['entry_data']['ProfilePage'][0]['graphql']['user']
     rescue JSON::ParserError => e
       return false
   end
